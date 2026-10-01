@@ -1,34 +1,55 @@
-nav ul li{
+nav ul li {
     display: inline-block;
-    border: 2px whitesmoke solid;
+    border: 2px navy solid;
     border-radius: 8px;
     background-color: rgba(45, 12, 23, 0.4);
-    padding: 8px;
+    padding: 10px;
     margin: 5px;
+    transition-duration: 100ms;
 }
-nav ul li:hover{
+
+nav ul li:hover {
     transform: scale(1.15);
+    background-color: #eb9849;
+
 }
-nav ul li a{
-    color:white;
+
+nav ul li a img {
+    height: 60px;
+    
+}
+
+#logo {
+    padding: 0.5px;
+    border: none;
+    background-color: rgba(45, 12, 23, 0);
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
 }
-.container{
+
+.container {
     background: rgba(23, 23, 24, 0.7);
     border-radius: 8px;
     border: 1px black solid;
     -webkit-backdrop-filter: blur(1px);
     backdrop-filter: blur(1px)
+}
 
+body {
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
     
+    background-image: url(../Pics/DottedMap.png);
 }
-body{
-    background-image: url(../Pics/world.avif);
-    color:white;
-}
-header{
+
+header {
     text-align: center;
 }
-nav{
+
+nav {
     text-align: center;
 }
