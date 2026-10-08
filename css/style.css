@@ -1,16 +1,17 @@
 nav ul li {
     display: inline-block;
-    border: 2px navy solid;
-    border-radius: 8px;
     background-color: rgba(45, 12, 23, 0.4);
     padding: 10px;
     margin: 5px;
+    border-radius: 8px;
     transition-duration: 100ms;
 }
 
 nav ul li:hover {
     transform: scale(1.15);
-    background-color: #eb9849;
+    background-color: rgba(235, 152, 73, 0.8);
+    border: 2px navy solid;
+    border-radius: 8px;
 
 }
 
@@ -34,12 +35,12 @@ nav ul li a {
     background: rgba(23, 23, 24, 0.7);
     border-radius: 8px;
     border: 1px black solid;
-    -webkit-backdrop-filter: blur(1px);
-    backdrop-filter: blur(1px)
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px)
 }
 
 body {
-    color: white;
+    color: rgb(80, 80, 80);
     background-size: cover;
     background-repeat: no-repeat;
     
