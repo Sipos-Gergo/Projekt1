@@ -1,57 +1,95 @@
-nav ul li {
-    display: inline-block;
-    background-color: rgba(45, 12, 23, 0.4);
-    padding: 10px;
-    margin: 5px;
-    border-radius: 8px;
-    transition-duration: 100ms;
-}
-
-nav ul li:hover {
-    transform: scale(1.15);
-    background-color: rgba(235, 152, 73, 0.8);
-    border: 2px navy solid;
-    border-radius: 8px;
-
-}
-
-nav ul li a img {
-    height: 60px;
-    
-}
-
-#logo {
-    padding: 0.5px;
-    border: none;
-    background-color: rgba(45, 12, 23, 0);
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-
-.container {
-    background: rgba(23, 23, 24, 0.7);
-    border-radius: 16px;
-    border: 1px black solid;
-    -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(3px)
+/* Alap */
+* {
+    box-sizing: border-box;
 }
 
 body {
-    color: rgb(80, 80, 80);
+    position: relative;
+    min-height: 100vh;
+    background-image: url(../Pics/DottedMap.png);
     background-size: cover;
     background-repeat: no-repeat;
-    
-    background-image: url(../Pics/DottedMap.png);
+    background-attachment: fixed;
+    color: rgb(80, 80, 80);
 }
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;                      /* top:0; right:0; bottom:0; left:0; */
+    background-color: rgba(73, 73, 73, 0.4);  /* szürke, 40% átlátszóság */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: -1;                   /* a tartalom mögé kerül */
+    pointer-events: none;          /* ne blokkolja a kattintásokat */
+}
+
 
 header {
     text-align: center;
 }
 
-nav {
+/* Konténer - sötét, elmosott háttér */
+.container {
+    background: rgba(199, 199, 224, 0.7);
+    border-radius: 16px;
+    border: 1px solid #000;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    padding: 10px;
     text-align: center;
+}
+
+/* Nav linkek stílusa Bootstrap 5 alatt */
+.navbar-nav .nav-link {
+    color: #fff;
+    background-color: rgba(45, 12, 23, 0.4);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    transition: transform 100ms ease, background-color 100ms ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+    color: #fff;
+    transform: scale(1.15);
+    background-color: rgba(235, 152, 73, 0.8);
+    border: 2px solid navy;
+    border-radius: 8px;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgba(235, 152, 73, 0.6);
+    color: #fff;
+}
+
+/* Logó */
+.navbar-brand img {
+    height: 60px;
+    width: auto;
+}
+
+/* Carousel középre igazítása */
+.carousel-center {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-center .carousel {
+    width: 75%;
+}
+
+.carousel-center .carousel-item img {
+    border-radius: 12px;
+}
+
+/* Mobilon kisebb margók */
+@media (max-width: 768px) {
+    .carousel-center .carousel {
+        width: 100%;
+    }
+    .navbar-nav .nav-link {
+        margin: 2px 0;
+    }
 }
