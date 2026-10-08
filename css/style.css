@@ -31,9 +31,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+
 .container {
     background: rgba(23, 23, 24, 0.7);
-    border-radius: 8px;
+    border-radius: 16px;
     border: 1px black solid;
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px)
