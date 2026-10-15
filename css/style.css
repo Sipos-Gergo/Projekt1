@@ -83,7 +83,7 @@ header {
 }
 
 .carousel-center .carousel {
-    width: 75%;
+    width: 100%;
 }
 
 .carousel-center .carousel-item img {
@@ -104,4 +104,8 @@ footer{
     background-color: rgba(0,0,0,0.8);
     padding: 40px 15%;
     color: darkgrey;
+}
+.card-img-top:hover{
+    opacity: 80%;
+        
 }
